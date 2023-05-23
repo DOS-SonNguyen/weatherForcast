@@ -12,7 +12,7 @@ function App() {
   const getWeather = async (e) => {
     e.preventDefault();
     try {
-      await fetch(`http://api.openweathermap.org/data/2.5/forecast?units=metric&q=${city}&APPID=${key}`)
+      await fetch(`https://api.openweathermap.org/data/2.5/forecast?units=metric&q=${city}&APPID=${key}`)
         .then(res => res.json())
         .then(result => {
           setWeather(result);
